@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+import NumberFormat from "react-number-format";
+import coronaImage from "../images/image.png";
+import indiaFlag from "../images/indiaFlag.png";
 
 class Cards extends Component {
   state = {
@@ -16,35 +19,77 @@ class Cards extends Component {
     let persons = this.state.persons;
     return (
       <div>
-        <h1>Covid-19 Tracker</h1>
-        <div className="container-fluid">
-          <div class="card-deck">
-            <div class="card bg-primary px-10">
-              <div class="card-body text-center">
-                <p class="card-text font-weight-bold h3">Infected</p>
+        {" "}
+        <br></br>
+        <div className="text-center">
+          <img src={coronaImage} alt="COVID-19" /> <br></br> <br></br>
+          <img src={indiaFlag} style={{ width: "30%" }} alt="INDIA" />
+        </div>
+        <br></br> <br></br>
+        <div className="container-fluid px-5">
+          <div className="card-deck">
+            <div className="card bg-primary px-10">
+              <div className="card-body text-center">
+                <p className="card-text font-weight-bold h3">
+                  Confirmed <br></br>{" "}
+                </p>
+                <p className="card-text h3">
+                  <NumberFormat
+                    value={persons.confirmed}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    thousandsGroupStyle="lakh"
+                  />
+                </p>
               </div>
             </div>
-            <div class="card bg-success">
-              <div class="card-body text-center">
-                <p class="card-text font-weight-bold h3">Recovered</p>
+            <div className="card bg-success">
+              <div className="card-body text-center">
+                <p className="card-text font-weight-bold h3">
+                  Recovered <br></br>{" "}
+                </p>
+                <p className="card-text h3">
+                  <NumberFormat
+                    value={persons.recovered}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    thousandsGroupStyle="lakh"
+                  />
+                </p>
               </div>
             </div>
-            <div class="card bg-danger">
-              <div class="card-body text-center">
-                <p class="card-text font-weight-bold h3">Deaths</p>
+            <div className="card bg-danger">
+              <div className="card-body text-center">
+                <p className="card-text font-weight-bold h3">
+                  Deaths <br></br>{" "}
+                </p>
+                <p className="card-text h3">
+                  <NumberFormat
+                    value={persons.deaths}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    thousandsGroupStyle="lakh"
+                  />
+                </p>
               </div>
             </div>
-            <div class="card bg-warning">
-              <div class="card-body text-center">
-                <p class="card-text font-weight-bold h3">Active</p>
+            <div className="card bg-warning">
+              <div className="card-body text-center">
+                <p className="card-text font-weight-bold h3">
+                  Active <br></br>{" "}
+                </p>
+                <p className="card-text h3">
+                  <NumberFormat
+                    value={persons.active}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    thousandsGroupStyle="lakh"
+                  />
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <h1>
-          {persons.active} <br></br>
-          {persons.confirmed}
-        </h1>
       </div>
     );
   }

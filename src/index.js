@@ -1,14 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-// import App from "./App";
+import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.css";
 import Cards from "./components/cards";
+import States from "./components/states";
 
 ReactDOM.render(
   <React.StrictMode>
     <Cards />
+    <States />
   </React.StrictMode>,
   document.getElementById("root")
 );
