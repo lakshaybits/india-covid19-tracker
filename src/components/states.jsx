@@ -23,7 +23,7 @@ class States extends Component {
         <table class="table table-striped">
           <thead>
             <tr>
-              <th className="text-center bg-warning" scope="col">
+              <th className="text-center bg-secondary" scope="col">
                 State/UT
               </th>
               <th className="text-center bg-primary" scope="col">
@@ -33,7 +33,10 @@ class States extends Component {
                 Recovered
               </th>
               <th className="text-center bg-danger" scope="col">
-                Death
+                Deaths
+              </th>
+              <th className="text-center bg-warning" scope="col">
+                Active
               </th>
             </tr>
           </thead>
@@ -51,7 +54,7 @@ class States extends Component {
                 </td>
                 <td className="text-center">
                   <NumberFormat
-                    value={person.active}
+                    value={person.recovered}
                     displayType={"text"}
                     thousandSeparator={true}
                     thousandsGroupStyle="lakh"
@@ -60,6 +63,14 @@ class States extends Component {
                 <td className="text-center">
                   <NumberFormat
                     value={person.deaths}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    thousandsGroupStyle="lakh"
+                  />
+                </td>
+                <td className="text-center">
+                  <NumberFormat
+                    value={person.active}
                     displayType={"text"}
                     thousandSeparator={true}
                     thousandsGroupStyle="lakh"
