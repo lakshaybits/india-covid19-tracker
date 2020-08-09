@@ -83,10 +83,10 @@ class States extends Component {
         <br></br>
         <div className="container fluid text-center">
           <h1 className={"googleFont"}>Lakshay Tomar</h1>
-          <h3>
+          <h5 className="text-muted">
             Made with <i className="fa fa-heart" style={{ color: "red" }}></i>{" "}
             in India
-          </h3>
+          </h5>
         </div>
       </div>
     );

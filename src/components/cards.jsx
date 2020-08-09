@@ -23,7 +23,9 @@ class Cards extends Component {
         <br></br>
         <div className="text-center">
           <img src={coronaImage} alt="COVID-19" /> <br></br> <br></br>
-          <img src={indiaFlag} style={{ width: "30%" }} alt="INDIA" />
+          <div className="col-lg-6 offset-lg-3">
+            <img src={indiaFlag} style={{ width: "30%" }} alt="INDIA" />
+          </div>
         </div>
         <br></br> <br></br>
         <div className="container-fluid px-5">

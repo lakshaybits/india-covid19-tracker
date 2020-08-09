@@ -1,15 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+//import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.css";
 import Cards from "./components/cards";
+import Daily from "./components/daily";
 import States from "./components/states";
 
 ReactDOM.render(
   <React.StrictMode>
     <Cards />
+    <Daily />
     <States />
   </React.StrictMode>,
   document.getElementById("root")
