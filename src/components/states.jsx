@@ -83,6 +83,35 @@ class States extends Component {
         <br></br>
         <div className="container fluid text-center">
           <h1 className={"googleFont"}>Lakshay Tomar</h1>
+          <h5 className="text-muted">You can find me everywhere</h5>
+          <a
+            href="https://www.facebook.com/lakshaytomar13"
+            style={{ color: "#3b5998", fontSize: "3em", marginLeft: "17px" }}
+            target="_blank"
+          >
+            <i class="fa fa-facebook-official"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/lakshay__tomar"
+            style={{ color: "#517fa4", fontSize: "3em", marginLeft: "17px" }}
+            target="_blank"
+          >
+            <i class="fa fa-instagram insta"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/lakshaytomar"
+            style={{ color: "#007bb6", fontSize: "3em", marginLeft: "17px" }}
+            target="_blank"
+          >
+            <i class="fa fa-linkedin-square"></i>
+          </a>
+          <a
+            href="mailto:lakshaytomar.bits@gmail.com"
+            style={{ color: "#d14836", fontSize: "3em", marginLeft: "17px" }}
+            target="_blank"
+          >
+            <i class="fa fa-envelope-o"></i>
+          </a>
           <h5 className="text-muted">
             Made with <i className="fa fa-heart" style={{ color: "red" }}></i>{" "}
             in India
